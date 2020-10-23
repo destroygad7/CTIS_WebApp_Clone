@@ -10,10 +10,13 @@ else if (storage_position=="manager"){
     document.getElementById("centredisplay").style.display = "block";
     document.getElementById("officerdisplay").style.display = "block";
     document.getElementById("testkitdisplay").style.display = "block";
+    document.getElementById("testdisplay").style.display = "block";
+    document.getElementById("graph").style.display="block";
     document.getElementById("posIN").innerHTML = "manager";
 }
 else if (storage_position=="tester"){
     document.getElementById("testdisplay").style.display = "block";
+    document.getElementById("graph").style.display="block";
     document.getElementById("posIN").innerHTML = "tester";
 }
 else if (storage_position=="master"){
@@ -21,6 +24,7 @@ else if (storage_position=="master"){
     document.getElementById("centredisplay").style.display = "block";
     document.getElementById("officerdisplay").style.display = "block";
     document.getElementById("testkitdisplay").style.display = "block";
+    document.getElementById("graph").style.display="block";
     document.getElementById("graph").style.display="block";
     document.getElementById("posIN").innerHTML = "master";
 }
@@ -117,9 +121,9 @@ function cancelNewtest() {
 }
 
 function cancelUpdatetest() {
-    document.getElementById('shade').style.display = "block";
-    document.getElementById('popup').style.display = "block";
-    document.getElementById('updatetest').style.display = "block";
+    document.getElementById('shade').style.display = "none";
+    document.getElementById('popup').style.display = "none";
+    document.getElementById('updatetest').style.display = "none";
     document.getElementById('testid').value ="";
     document.getElementById('testresult').value ="";
 }
