@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/CTIS.css">
+        <script type="text/javascript" src="js/Script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="nav">
+            <img id="head" src="media/head.png" alt="Avatar">
+            <div id="user" class="infobar" >
+                <h3 id="userIN">_name</h3>
+            </div>
+            <div id="position" class="infobar">
+                <span id="posIN" class="badge badge-info">_pos</span>
+            </div>
+            <p class="ctislogo">CTIS</p>
+            <div id="logoutdiv">
+                <a id="logout"onclick="window.location.replace('index.html')" class="logoutbtn" href="#">
+                  LOGOUT
+                  <span class="logoutbg"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="bodyscroll">
+            <div class="body">
+                    <div class="graph-cont" id="graph">
+                        <h1 id="barcharttext">Statistics</h1>
+                        <div class="bar bar1">40% quarantined</div>
+                        <div class="bar bar2">72% close contact</div>
+                        <div class="bar bar3">15% infected</div>
+                        <div class="bar bar4">26% suspected</div>
+                    </div>
+                
+
+                <div class="alert alert-danger alert-success fade show body_alert" id="topalertbar">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    
+                    <span></span>
+                </div>
+
+                <!--CENTREEEEEEEEE------------------------------------------------------------------------------------------------------------------>
+                <div class="content" id="centredisplay">
+                    <table>
+                        <tr class="titletable">
+                            <td><a href="#centre_div" class="btn btn-info" data-toggle="collapse" onclick="">Show/Hide</a></td> 
+                            <td><h4><b>Test Centre</b></h4></td>   
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="content collapse" id="centre_div">
+                    <div class="btn-group btn-group">
+                        <button type="button" class="btn btn-danger" onclick="ShowAddCentre()" >Add</button>
+                        <button type="button" id="centre_refresh" onclick="ShowCentre()" class="btn btn-danger">Refresh</button>
+                    </div>
+                    <div>
+                        <input type="text" id="centre_filter" class="datafilter" onkeyup="Centre_Filter()" placeholder="Filter Centre Here..">
+                    </div>
+                    <div class="table_div">
+                        <table class="datatable" id="centre_table">
+                            <thead>
+                                <tr>
+                                    <th>Centre ID</th>
+                                    <th>Centre Name</th>
+                                </tr>
+                            </thead>
+                            <tbody id="centre_body">
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--OFFICERSSS------------------------------------------------------------------------------------------------------------------>
+                <div class="content" id="officerdisplay">
+                    <table class="titletable">
+                        <tr>
+                            <td><a href="#officer_div" class="btn btn-info" data-toggle="collapse" onclick="ShowCentre();">Show/Hide</a></td> 
+                            <td><h4><b>Test Centre Officers</b></h4></td>   
+                        </tr>
+                    </table>
+                </div>
+                <div class="content collapse" id="officer_div">
+                    <div class="btn-group btn-group">
+                        <button type="button" class="btn btn-danger" onclick="ShowAddofficer();">Add</button>
+                        <button type="button" id="officer_refresh" onclick="ShowOfficer()" class="btn btn-danger">Refresh</button>
+                    </div>
+                    <div>
+                        <input type="text" id="officer_filter" class="datafilter" onkeyup="Centre_Filter();" placeholder="Filter Officers Here..">
+                    </div>
+                    <div class="table_div">
+                        <table class="datatable" id="officer_table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Username</th>
+                                    <th>Position</th>
+                                    <th>CentreID</th>
+                                </tr>
+                            </thead>
+                            <tbody id="officer_body">
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--TESTKITTTTTT------------------------------------------------------------------------------------------------------------------>
+                <div class="content" id="testkitdisplay">
+                    <table class="titletable">
+                        <tr>
+                            <td><a href="#testkit_div" class="btn btn-info" data-toggle="collapse" onclick="">Show/Hide</a></td> 
+                            <td><h4><b>Test Kits</b></h4></td>   
+                        </tr>
+                    </table>
+                </div>
+                <div class="content collapse" id="testkit_div">
+                    <div class="btn-group btn-group">
+                        <button type="button" class="btn btn-danger" onclick="ShowAddtestkit();">Add</button>
+                        <button type="button" class="btn btn-danger" onclick="Showupdatekit();">Update</button>
+                        <button type="button" id="testkit_refresh" onclick="" class="btn btn-danger">Refresh</button>
+                    </div>
+                    <div>
+                        <input type="text" id="testkit_filter" class="datafilter" onkeyup="" placeholder="Filter Test Kits Here..">
+                    </div>
+                    <div class="table_div">
+                        <table class="datatable" id="testkit_table">
+                            <thead>
+                                <tr>
+                                    <th>KitID</th>
+                                    <th>TestName</th>
+                                    <th>Stock</th>
+                                    <th>CentreID</th>
+                                </tr>   
+                            </thead>
+                            <tbody id="testkit_body">
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!--NEW TEST RESULTS------------------------------------------------------------------------------------------------------------------>
+                <div class="content" id="testdisplay">
+                    <table class="titletable">
+                        <tr>
+                            <td><a href="#newtest_div" class="btn btn-info" data-toggle="collapse" onclick="">Show/Hide</a></td> 
+                            <td><h4><b>Test Results</b></h4></td>   
+                        </tr>
+                    </table>
+                </div>
+                <div class="content collapse" id="newtest_div">
+                    <div class="btn-group btn-group">
+                        <button type="button" class="btn btn-danger" onclick="ShowNewtest();">Add</button>
+                        <button type="button" class="btn btn-danger" onclick="ShowUpdatetest();">Update</button>
+                        <button type="button" id="newtest_refresh" onclick="" class="btn btn-danger">Refresh</button>
+                    </div>
+                    <div>
+                        <input type="text" id="newtest_filter" class="datafilter" onkeyup="" placeholder="Filter Test ID Here..">
+                    </div>
+                    <div class="table_div">
+                        <table class="datatable" id="newtest_table">
+                            <thead>
+                                <tr>
+                                    <th>TestID</th>
+                                    <th>TestDate</th>
+                                    <th>Result</th>
+                                    <th>ResultDate</th>
+                                    <th>Status</th>
+                                    <th>Patient</th>
+                                    <th>KitID</th>
+                                    <th>Tester</th>
+                                    <th>Symptons</th>
+                                </tr>   
+                            </thead>
+                            <tbody id="newtest_body">
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!--PopUPs------------------------------------------------------------------------------------------------------------------>
+            <div class="shade" id="shade">
+                <div class="area" >
+                    <ul class="circles">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                    </ul>
+                </div >
+            </div>
+
+            <div class="popup" id="popup">  
+                <!-- REGISTER TEST CENTRE-->
+                <div id="addcentre">
+                    <div class="popup_bar">
+                        <h3 class="popup_title" id="popup_title">Register Test Centre</h3>
+                    </div>
+                    <div class="popup_line"></div>
+                    <form class="form" id="add_centre_form">
+                        <div id="add_centre_alert">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="centreName" name="centreName" class="form_input form-control" onclick="" onfocus="" onkeyup="" placeholder="Centre Name">
+                        </div>
+                        <div class="popup_button">
+                            <button type="button" class="btn btn-info formbtn" onclick="addCentre();">Add</button>
+                            <button type="button" class="btn btn-danger formbtn" onclick="cancelcentre();">Cancel</button>
+                        </div>
+                    </form>
+                </div> 
+            
+                <!--ADD TESTER-->
+                <div id="addofficer">
+                    <div class="popup_bar">
+                        <h3 class="popup_title" id="popup_title">Record Test Centre Officer</h3>
+                    </div>
+                    <div class="popup_line"></div>
+                    <form id="add_tester_form" class="form">
+                        <div id="add_tester_alert">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="testeruser" class="form_input form-control" name="testeruser" onclick="" onfocus="" onkeyup="" placeholder="Username">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="password" id="testerpass" class="form_input form-control" name="testerpass" onclick="" onfocus="" onkeyup="" placeholder="Password">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="testername" class="form_input form-control" name="testername" onclick="" onfocus="" onkeyup="" placeholder="Full Name">
+                        </div>
+                        <div class="popup_button" >
+                            <button type="button" class="btn btn-info formbtn" onclick="addTester();">Register</button>
+                            <button type="button" class="btn btn-danger formbtn" onclick="cancelofficer();">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+
+                <!--TEST KIT-->
+                <div id="addtestkit">
+                    <div class="popup_bar">
+                        <h3 class="popup_title" id="popup_title">Manage Test Kit Stock</h3>
+                    </div>
+                    <div class="popup_line"></div>
+                    <form id="add_tester_form" class="form">
+                        <div id="testkit_alert">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="kitid" class="form_input form-control" name="kitid" onclick="" onfocus="" onkeyup="" placeholder="KitID">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="kitname" class="form_input form-control" name="kitid" onclick="" onfocus="" onkeyup="" placeholder="Test Kit Name" disabled>
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="number" id="kitstock" class="form_input form-control" name="kitid" onclick="" onfocus="" onkeyup="" placeholder="Stock" disabled>
+                        </div>
+                        <div class="popup_button" >
+                            <button type="button" class="btn btn-info formbtn" onclick="canceltestkit();" >Update</button>
+                            <button type="button" class="btn btn-danger formbtn" onclick="canceltestkit();">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+
+                <!-- RECORD TEST-->
+                <div id="recordtest">
+                    <div class="popup_bar">
+                        <h3 class="popup_title" id="popup_title">Record Test</h3>
+                    </div>
+                    <div class="popup_line"></div>
+                    <form id="add_patient_form" class="form">
+                        <div id="add_patient_alert">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="patientuser" class="form_input form-control" name="patientuser" onclick="" onfocus="" onkeyup="" placeholder="Username">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="password" id="patientpass" class="form_input form-control" name="testerpass" onclick="" onfocus="" onkeyup="" placeholder="Password">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="patientname" class="form_input form-control" name="patientname" onclick="" onfocus="" onkeyup="" placeholder="Full Name">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <select id="patienttype" class="form_input form-control" name="patienttype" onselect="">
+                                <option value="default">Select Patient Type</option>
+                                <option value="returnee">returnee</option>
+                                <option value="quarantined">quarantined</option>
+                                <option value="close contact">close contact</option>
+                                <option value="infected">infected</option>
+                                <option value="suspected">suspected</option>
+                            </select>
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <textarea rows="4" id="patientsym" class="form_input form-control" name="patientsym" onclick="" onfocus="" onkeyup="">Enter symptoms here....</textarea>
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="testkituse" class="form_input form-control" name="testkituse" onclick="" onfocus="" onkeyup="" placeholder="Test Kit ID used">
+                        </div>
+                        <div class="popup_button" >
+                            <button type="button" class="btn btn-info formbtn" onclick="cancelNewtest();" disabled>Add</button>
+                            <button type="button" class="btn btn-danger formbtn" onclick="cancelNewtest();">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+
+                <!-- UPDATE TEST RESULT-->
+                <div id="updatetest">
+                    <div class="popup_bar">
+                        <h3 class="popup_title" id="popup_title">Update Test Results</h3>
+                    </div>
+                    <div class="popup_line"></div>
+                    <form id="update_test_form" class="form">
+                        <div id="update_test_alert">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="testid" class="form_input form-control" name="testid" onclick="" onfocus="" onkeyup="" placeholder="TestID">
+                        </div>
+                        <div class="form-group fgroup"  class="forms row">
+                            <input type="text" id="testresult" class="form_input form-control" name="testresult" onclick="" onfocus="" onkeyup="" placeholder="Result" disabled>
+                        </div>
+                        <div class="popup_button" >
+                            <button type="button" class="btn btn-info formbtn" onclick="cancelNewtest();">Update</button>
+                            <button type="button" class="btn btn-danger formbtn" onclick="cancelNewtest();">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!--BACKGROUNDDDDDDD-->
+        <div class="ripple-background backgroundsize">
+            <div class="circle xxlarge shade1"></div>
+            <div class="circle xlarge shade2"></div>
+            <div class="circle large shade3"></div>
+            <div class="circle mediun shade4"></div>
+            <div class="circle small shade5"></div>
+        </div>
+        <script type="text/javascript" src="js/UI.js"></script>
+    </body>
+</html>

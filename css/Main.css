@@ -1,0 +1,507 @@
+/**css for main aind patient**/
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+    --text-color: hsla(210, 50%, 85%, 1);
+    --shadow-color: hsla(210, 40%, 52%, 0.4);
+    --btn-color: hsl(210, 67%, 70%);
+    --bg-color: #141218;
+}
+
+.blurred-box {
+    width: 418px;
+    height: 420px;
+    margin: auto;
+    left: 25%;
+    right: 25%;
+    margin-top: 10%;
+    z-index: 5;
+    position: fixed;
+    filter: blur(6px);
+    background-image: url(../media/loginbg.jpg);
+}
+
+/** LOGIN VIEW **/
+svg{
+  font-weight:bold;
+  max-width:600px;
+  height:auto;
+  margin-top: 10%;
+}
+
+#login_view {
+    width: 420px;
+    height: 420px;
+    margin: auto;
+    left: 25%;
+    right: 25%;
+    margin-top: 10%;
+    padding: 0px 0px 0px 0px;
+    z-index: 5;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#login_form {
+    
+    width: 360px;
+    margin: auto;
+    padding: 1px 0px 10px 0px;
+}
+
+/** PATIENT VIEW **/
+#patient_scroll {
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 100%;
+    position: fixed;
+    z-index: 5;
+
+}
+body ::-webkit-scrollbar{
+    display: none;
+}
+
+
+#patient_frame {
+    width: 450px;
+    min-height: 500px;
+    margin: auto;
+    left: 25%;
+    right: 25%;
+    margin-top: 5%;
+    z-index: 11;
+    margin-bottom: 150px;
+    padding: 15px 0px 0px 0px;
+    background-color:rgb(192, 192, 192, 0.4) ;
+    border-radius: 2px;
+}
+
+.patient_table, .patient_table tr, .patient_table td {
+    padding: 5px 15px 5px 10px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.sidetd {
+    width: 120px;
+    text-align: right;
+}
+
+.datatd {
+    width:  200px;
+    text-align: left;
+}
+
+.patient_history{
+    margin: auto;
+    width: 350px;
+    background-color:rgba(223, 231, 233, 0.6);
+    padding: 15px 0px 20px 0px;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: #adc8d1;
+}
+tr:nth-child(odd) {
+  background-color: #b7d9e4;
+}
+
+td:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#endbar {
+    height: 50px;
+}
+
+h3 {
+    color: rgb(83, 145, 153);
+}
+
+/**animations**/
+/**loginbg**/
+.blank {
+    /*background-color: #2f2f2f;*/
+    background-color:#2f2f2f;;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  .d1 {
+    position: absolute;
+    background-image: url(../media/loginbg.jpg);
+    background-size: 1920px 1080px;
+  
+    height: 30vh;
+    width: 15vw;
+  
+    background-position: 0 50%;
+  
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    animation: dd1 10s 1, dd12 10s 1;
+    animation-delay: 4s, 14s;
+  }
+  .d2 {
+    position: absolute;
+    background-image: url(../media/loginbg.jpg);
+    background-size: 1920px 1080px;
+  
+    height: 50vh;
+    width: 25vw;
+  
+    background-position: -10vw 50%;
+    left: 10vw;
+  
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd2 10s 2;
+    animation-delay: 4s;
+  }
+  .d3 {
+    position: absolute;
+    background-image: url(../media/loginbg.jpg);
+    background-size: 1920px 1080px;
+    overflow: hidden;
+  
+    height: 100vh;
+    width: 40vw;
+    left: 25vw;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    background-position: -35vw 50%;
+  
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    animation: dd3 10s 2;
+    animation-delay: 4s;
+  }
+  .d4 {
+    position: absolute;
+    overflow: hidden;
+    background-image: url(../media/loginbg.jpg);
+    background-size: 1920px 1080px;
+  
+    height: 80vh;
+    width: 25vw;
+    left: 60vw;
+    background-position: -70vw 50%;
+  
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd4 10s 2;
+    animation-delay: 4s;
+  }
+  
+  @keyframes dd1 {
+    0% {
+    }
+    50% {
+      width: 95vw;
+    }
+  }
+  @keyframes dd12 {
+    0% {
+    }
+    50% {
+      background-position: Calc(0vw - 40px) 50%;
+    }
+  }
+  @keyframes dd2 {
+    0% {
+    }
+    50% {
+      background-position: Calc(-10vw - 40px) 50%;
+    }
+  }
+  @keyframes dd3 {
+    0% {
+    }
+    50% {
+      background-position: Calc(-35vw - 40px) 50%;
+    }
+  }
+  @keyframes dd4 {
+    0% {
+    }
+    50% {
+      background-position: Calc(-70vw - 40px) 50%;
+    }
+  }
+  
+
+/* my fav button */
+button {
+  position:relative;
+  padding: 10px 20px;  
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;  
+  color: var(--text-color);
+  
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px; 
+  z-index: 0;  
+  overflow: hidden;   
+  
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after, button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events:none;
+}
+
+button::after{
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+} 
+
+.right, .left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.right {
+  left: 66%;
+}
+.left {
+  right: 66%;
+}
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+  
+  background-color: var(--bg-color);
+  color:transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+/***** the bubbles */
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
+/**patient background**/
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: 1;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  /*background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);**/
+  background-image: linear-gradient(to top, #5bc0de 20%, #374f66 90%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+animation: move-wave 3s;
+ -webkit-animation: move-wave 3s;
+ -webkit-animation-delay: 1s;
+ animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
+
+
+/*revealing animation */
+#userreveal {
+  width: 400px;
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+  font-size: larger;
+  color: transparent;
+  padding: 4px;
+  z-index: 5;
+  position: relative;
+  overflow: hidden;
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+.block-revealsmall {
+  --t: calc(var(--td) + var(--d));
+  font-size: smaller;
+  color: transparent;
+  padding: 4px;
+  z-index: 5;
+  position: relative;
+  overflow: hidden;
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-revealsmall::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+@keyframes revealBlock {
+  100% {
+    color: #5bc0de;
+    -webkit-text-stroke: 1px #688d99;
+    font-family: 'Staatliches', cursive;
+  }
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
