@@ -77,7 +77,7 @@ function cancelcentre() {
     document.getElementById('centreName').value = "";
     document.getElementById('shade').style.display = "none";
     document.getElementById('popup').style.display = "none";
-    document.getElementById('centreName').value ="";
+    document.getElementById('addcentre').style.display = "none";
 }
 
 function cancelofficer() {
@@ -93,7 +93,7 @@ function canceltestkit() {
     document.getElementById('shade').style.display = "none";
     document.getElementById('popup').style.display = "none";
     document.getElementById('addtestkit').style.display = "none";
-    document.getElementById('kitid').style.display="noneblock";
+    document.getElementById('kitid').style.display="none";
     document.getElementById('kitid').value ="";
     document.getElementById('kitname').value ="";
     document.getElementById('kitstock').value ="";

@@ -23,7 +23,7 @@
             </div>
             <p class="ctislogo">CTIS</p>
             <div id="logoutdiv">
-                <a id="logout"onclick="window.location.replace('index.html')" class="logoutbtn" href="#">
+                <a id="logout" onclick="window.location.replace('index.html')" class="logoutbtn" href="#">
                   LOGOUT
                   <span class="logoutbg"></span>
                 </a>
@@ -231,19 +231,19 @@
                 <!--ADD TESTER-->
                 <div id="addofficer">
                     <div class="popup_bar">
-                        <h3 class="popup_title" id="popup_title">Record Test Centre Officer</h3>
+                        <h3 class="popup_title" >Record Test Centre Officer</h3>
                     </div>
                     <div class="popup_line"></div>
                     <form id="add_tester_form" class="form">
                         <div id="add_tester_alert">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="testeruser" class="form_input form-control" name="testeruser" onclick="" onfocus="" onkeyup="" placeholder="Username">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="password" id="testerpass" class="form_input form-control" name="testerpass" onclick="" onfocus="" onkeyup="" placeholder="Password">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="testername" class="form_input form-control" name="testername" onclick="" onfocus="" onkeyup="" placeholder="Full Name">
                         </div>
                         <div class="popup_button" >
@@ -257,19 +257,19 @@
                 <!--TEST KIT-->
                 <div id="addtestkit">
                     <div class="popup_bar">
-                        <h3 class="popup_title" id="popup_title">Manage Test Kit Stock</h3>
+                        <h3 class="popup_title">Manage Test Kit Stock</h3>
                     </div>
                     <div class="popup_line"></div>
-                    <form id="add_tester_form" class="form">
+                    <form id="add_testkit_form" class="form">
                         <div id="testkit_alert">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="kitid" class="form_input form-control" name="kitid" onclick="" onfocus="" onkeyup="" placeholder="KitID">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="kitname" class="form_input form-control" name="kitid" onclick="" onfocus="" onkeyup="" placeholder="Test Kit Name" disabled>
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="number" id="kitstock" class="form_input form-control" name="kitid" onclick="" onfocus="" onkeyup="" placeholder="Stock" disabled>
                         </div>
                         <div class="popup_button" >
@@ -283,22 +283,22 @@
                 <!-- RECORD TEST-->
                 <div id="recordtest">
                     <div class="popup_bar">
-                        <h3 class="popup_title" id="popup_title">Record Test</h3>
+                        <h3 class="popup_title">Record Test</h3>
                     </div>
                     <div class="popup_line"></div>
                     <form id="add_patient_form" class="form">
                         <div id="add_patient_alert">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="patientuser" class="form_input form-control" name="patientuser" onclick="" onfocus="" onkeyup="" placeholder="Username">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="password" id="patientpass" class="form_input form-control" name="testerpass" onclick="" onfocus="" onkeyup="" placeholder="Password">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="patientname" class="form_input form-control" name="patientname" onclick="" onfocus="" onkeyup="" placeholder="Full Name">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <select id="patienttype" class="form_input form-control" name="patienttype" onselect="">
                                 <option value="default">Select Patient Type</option>
                                 <option value="returnee">returnee</option>
@@ -308,10 +308,10 @@
                                 <option value="suspected">suspected</option>
                             </select>
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <textarea rows="4" id="patientsym" class="form_input form-control" name="patientsym" onclick="" onfocus="" onkeyup="">Enter symptoms here....</textarea>
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="testkituse" class="form_input form-control" name="testkituse" onclick="" onfocus="" onkeyup="" placeholder="Test Kit ID used">
                         </div>
                         <div class="popup_button" >
@@ -325,16 +325,16 @@
                 <!-- UPDATE TEST RESULT-->
                 <div id="updatetest">
                     <div class="popup_bar">
-                        <h3 class="popup_title" id="popup_title">Update Test Results</h3>
+                        <h3 class="popup_title" >Update Test Results</h3>
                     </div>
                     <div class="popup_line"></div>
                     <form id="update_test_form" class="form">
                         <div id="update_test_alert">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="testid" class="form_input form-control" name="testid" onclick="" onfocus="" onkeyup="" placeholder="TestID">
                         </div>
-                        <div class="form-group fgroup"  class="forms row">
+                        <div class="form-group fgroup"  >
                             <input type="text" id="testresult" class="form_input form-control" name="testresult" onclick="" onfocus="" onkeyup="" placeholder="Result" disabled>
                         </div>
                         <div class="popup_button" >
