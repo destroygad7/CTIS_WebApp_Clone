@@ -6,7 +6,11 @@ Covid-19 tests, keep track of test kits, and allow patients to check for updates
 password registered.
 
 
+## Color Reference
 
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Theme colour | ![#5bc0de](https://via.placeholder.com/10/5bc0de?text=+) #5bc0de |
 
 
 ## Features
@@ -36,11 +40,7 @@ password registered.
 
 - updatePatient(username, patientType, symtoms)
 
-## Color Reference
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Theme colour | ![#5bc0de](https://via.placeholder.com/10/5bc0de?text=+) #5bc0de |
 
 ## Others
 
